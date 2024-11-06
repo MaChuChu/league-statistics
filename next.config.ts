@@ -9,7 +9,6 @@ const nextConfig: NextConfig = {
   publicRuntimeConfig: {
     basePath: '/league-statistics',
   },
-  output: 'export',
   images: {
     remotePatterns: [
       {
