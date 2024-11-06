@@ -84,7 +84,7 @@ export default function Home() {
     return (
         <main>
             <div className="top-container">
-                <h1>League Champion's</h1>
+                <h1>League Champions</h1>
 
                 <div className="search-container">
                     <input
