@@ -83,18 +83,20 @@ export default function Home() {
 
     return (
         <main>
-            <h1>League PokeDex</h1>
+            <div className="top-container">
+                <h1>League Champion's</h1>
 
-            <div className="search-container">
-                <input
-                    name="search"
-                    value={searchTerm}
-                    onChange={handleInputChange}
-                    placeholder="Search for a champion"
-                />
-                <button className="search-button" onClick={handleSearchClick}>
-                    <SearchIcon color="white" />
-                </button>
+                <div className="search-container">
+                    <input
+                        name="search"
+                        value={searchTerm}
+                        onChange={handleInputChange}
+                        placeholder="Search for a champion"
+                    />
+                    <button className="search-button" onClick={handleSearchClick}>
+                        <SearchIcon color="white" />
+                    </button>
+                </div>
             </div>
 
             <div className="information-container">

@@ -33,12 +33,17 @@ html {
 }
 
 main {
+  width: 90vw;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   flex: 1;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
 
+  background-color: rgba(21, 37, 43, 0.466);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
   gap: 20px;
 }
 
@@ -53,12 +58,34 @@ footer {
 /* ----------------------------------------------------- */
 /* Search */
 
+.top-container {
+  min-width: 80%;
+  padding: 8px 8px;
+  gap: 50px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: rgb(34, 51, 71);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+}
+
+.top-container h1 {
+  letter-spacing: 0.3rem;
+  font-weight: 400;
+}
+
 .search-container {
+  width: 400px;
   display: flex;
   flex-direction: row;
   gap: 12px;
   background-color: white;
   border-radius: 20px;
+  margin-left: auto;
 }
 
 input {
@@ -66,6 +93,7 @@ input {
   font-size: 1rem;
   border-radius: 20px;
   border: none;
+  margin-left: auto;
 }
 
 input:focus,
@@ -78,17 +106,13 @@ button:focus {
 .search-button {
   background: none;
   border: none;
-  padding: 0;
-  margin: 0;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-flex;
+  float: right;
 }
 
 .search-button:focus {
   outline: none;
-  /* To remove the focus outline on click */
 }
 
 .svg-icon {
@@ -108,17 +132,19 @@ button:focus {
 /* ----------------------------------------------------- */
 
 .information-container {
+  width: 80%;
+  max-height: inherit;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin-bottom: 10px;
   gap: 20px;
-  height: 460px;
 }
 
 .legends-container {
-  width: 520px;
+  height: 510px;
   display: flex;
   flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0.13);
+  background-color: rgba(5, 155, 201, 0.13);
   border-radius: 20px;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -131,48 +157,52 @@ ol {
   flex-wrap: wrap;
   list-style: none;
   gap: 20px;
+  justify-content: center;
 }
 
 li {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
+
   background-color: black;
-  padding: 10px;
-  border-radius: 12px;
+  border: 2px solid black;
+  border-radius: 5px;
+  overflow: hidden;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: all ease-in-out 0.3s;
 }
 
 li:hover {
   cursor: pointer;
-  transition: box-shadow ease-in-out 0.3s;
-  box-shadow: rgb(197, 240, 157) 0px 5px 15px;
-}
-
-li img {
-  background-color: rgb(81, 180, 180);
+  box-shadow: rgb(197, 240, 157) 0px 0px 20px;
+  border: 2px solid rgba(221, 243, 213, 0.753);
 }
 
 .champion-container {
+  height: fit-content;
   display: flex;
   flex-direction: row;
-  width: min-content;
-  background-color: rgba(255, 255, 255, 0.158);
+  background-color: rgba(5, 155, 201, 0.13);
   border-radius: 20px;
+  overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .champion-container img {
-  height: inherit;
+  height: max-content;
+  width: max-content;
 }
 
 .champion-text-container {
-  width: 250px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 10px;
   padding: 10px;
+
+  color: rgb(119, 194, 238);
 }
