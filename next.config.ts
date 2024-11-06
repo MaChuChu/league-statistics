@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
+/* Conditional statement so build can work in production and locally. */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  basePath: isProd ? '/league-statistics' : '',
+  assetPrefix: '/league-statistics',
+  publicRuntimeConfig: {
+    basePath: '/league-statistics',
+  },
+  output: 'export',
   images: {
     remotePatterns: [
       {
