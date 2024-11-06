@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body,
+html {
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, sans-serif;
+  color: var(--foreground);
+  background: var(--background);
+
+  --background: #0a0a0aee;
+  --foreground: #ededed;
+
+}
+
+/* ----------------------------------------------------- */
+/* Main layout */
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+}
+
+
+/* ----------------------------------------------------- */
+/* Search */
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+input {
+  padding: 0 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:focus {
+  outline: none;
+  /* To remove the focus outline on click */
+}
+
+.svg-icon {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(122, 119, 119, 0.445);
+  padding: 10px;
+  border-radius: 20px;
+  transition: all ease-in-out 0.4s;
+}
+
+.svg-icon:hover {
+  cursor: pointer;
+  background-color: rgb(107, 107, 107);
+}
+
+/* ----------------------------------------------------- */
+
+.information-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 460px;
+}
+
+.legends-container {
+  width: 520px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.13);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow-y: scroll;
+}
+
+ol {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 20px;
+}
+
+li {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  padding: 10px;
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li:hover {
+  cursor: pointer;
+  transition: box-shadow ease-in-out 0.3s;
+  box-shadow: rgb(197, 240, 157) 0px 5px 15px;
+}
+
+li img {
+  background-color: rgb(81, 180, 180);
+}
+
+.champion-container {
+  display: flex;
+  flex-direction: row;
+  width: min-content;
+  background-color: rgba(255, 255, 255, 0.158);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.champion-container img {
+  height: inherit;
+}
+
+.champion-text-container {
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
