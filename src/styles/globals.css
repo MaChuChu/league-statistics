@@ -19,6 +19,8 @@ html {
   --background: #0a0a0aee;
   --foreground: #ededed;
 
+  scrollbar-width: none;
+
 }
 
 /* ----------------------------------------------------- */
@@ -149,6 +151,7 @@ button:focus {
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 ol {
@@ -205,4 +208,62 @@ li:hover {
   padding: 10px;
 
   color: rgb(119, 194, 238);
+}
+
+/* ----------------------------------------------------- */
+/* Mobile  */
+
+@media screen and (max-width: 830px) {
+  .top-container {
+    width: inherit;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    margin: 0;
+    gap: 10px;
+  }
+
+  .search-container {
+    width: inherit;
+    margin: 0;
+
+    input {
+      margin: 0;
+      width: 100%;
+    }
+
+    .search-button {
+      margin-left: auto;
+    }
+  }
+
+  .information-container {
+    width: inherit;
+    margin: 0;
+  }
+
+  .champion-container img {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .top-container {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .champion-container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .champion-container img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 10px solid black;
+  }
 }
